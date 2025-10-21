@@ -1,0 +1,12 @@
+{% include 'header.html'%}
+        <main>
+            <h1>Resultado</h1>
+           {% if resultado %}
+                <p>El valor en  dolares es de: {{resultado}}</p> 
+           {% else %}
+                <p>No se pudo realizar la conversión</p>
+            {% endif %}
+            
+        </main>
+        
+{% include 'footer.html' %}

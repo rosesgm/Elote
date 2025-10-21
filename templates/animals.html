@@ -1,0 +1,33 @@
+{% include 'header.html'%}
+        <main>
+            <div>
+                <table class="table table-bordered align-middle">
+                    <!--Table head -->
+                    <thead class="table-dark">
+                        <!--Table row -->
+                        <tr>
+                            <!--table header-->
+                            <th>Nombre</th>
+                            <th>Color</th>
+                        </tr>
+                    </thead>
+                    <!--table body(cuerpo de la tabla)-->
+                    <tbody>
+                       {% for a in animals %}
+                       <tr>
+                        {# Tabla data #}
+                        <td>{{a.name }}</td>
+                        <td>{{a.color}}</td>
+                       </tr>
+                       {% else %}
+                       <tr>
+                        <td colspan="2">No hay registros de animales</td>
+                       </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+                
+        </main>
+        
+{% include 'footer.html' %}
